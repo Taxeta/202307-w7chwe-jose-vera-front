@@ -1,4 +1,5 @@
 import battleRobotsLogo from "../../assets/battleRobotsLogo.png";
+import "./Header.css";
 
 const Header = (): React.ReactElement => {
   return (
