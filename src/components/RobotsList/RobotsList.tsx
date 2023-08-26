@@ -1,4 +1,5 @@
 import { useAppSelector } from "../../store";
+import "./RobotsList.css";
 
 const RobotsList = (): React.ReactElement => {
   const robots = useAppSelector((state) => state.robotsState.robots);
@@ -6,9 +7,9 @@ const RobotsList = (): React.ReactElement => {
   return (
     <>
       <div>
-        <h2>List Of WarMachines</h2>
+        <h2 className="robots-title">List Of WarMachines</h2>
       </div>
-      <ul>
+      <ul className="robots-list">
         {robots.map((robot) => (
           <li key={robot.id}></li>
         ))}

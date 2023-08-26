@@ -6,8 +6,8 @@ import App from "./App";
 
 describe("Given an App component", () => {
   describe("When rendered", () => {
-    test("Then it should show the text 'Hello world!", () => {
-      const expectedText = /BattleRobots/i;
+    test("Then it should show the text 'Battle Robots", () => {
+      const expectedText = "Battle Robots";
 
       render(
         <Provider store={store}>
@@ -17,9 +17,9 @@ describe("Given an App component", () => {
         </Provider>,
       );
 
-      const text = screen.getByText(expectedText);
+      const heading = screen.getByRole("heading", { name: expectedText });
 
-      expect(text).toBeInTheDocument();
+      expect(heading).toBeInTheDocument();
     });
   });
 });
