@@ -10,7 +10,7 @@ describe("Given a robots reducer", () => {
       };
       const robots = robotsMock;
 
-      const loadRobotsAction = loadRobotsActionCreator;
+      const loadRobotsAction = loadRobotsActionCreator(robots);
 
       const newRobotState = robotsReducer(currentRobotState, loadRobotsAction);
 
