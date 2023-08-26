@@ -1,6 +1,6 @@
-import { ApiRobots } from "../types";
+import { Robot } from "../types";
 
-export const robotsMock: ApiRobots[] = [
+export const robotsMock: Robot[] = [
   {
     id: "1",
     name: "words destructor",
