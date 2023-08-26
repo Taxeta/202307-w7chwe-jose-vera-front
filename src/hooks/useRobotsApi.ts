@@ -23,7 +23,7 @@ const useRobotsApi = () => {
 
       return robots;
     } catch (error) {
-      throw new Error("Can't get any user");
+      throw new Error("Can't get any robot");
     }
   }, [apiUrl]);
 

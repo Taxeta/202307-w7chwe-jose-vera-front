@@ -1,0 +1,6 @@
+.robots-title {
+  font-size: 21px;
+  font-family: var(--primaryFont);
+  color: var(--white);
+  text-align: center;
+}

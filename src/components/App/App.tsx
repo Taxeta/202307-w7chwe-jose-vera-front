@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import RobotsListPage from "../../pages/RobotsListPage/RobotsListPage";
 import Header from "../Header/Header";
 import "./App.css";
 
@@ -12,7 +13,7 @@ const App = (): React.ReactElement => {
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/robot-creator" element={<Navigate to="/home" />} />
         </Routes>
-        <p>BattleRobots</p>
+        <RobotsListPage />
       </main>
     </div>
   );
