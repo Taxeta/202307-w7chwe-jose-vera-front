@@ -10,6 +10,7 @@ const App = (): React.ReactElement => {
         <Routes>
           <Route path="home" element />
           <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/robot-creator" element={<Navigate to="/home" />} />
         </Routes>
         <p>BattleRobots</p>
       </main>
