@@ -5,3 +5,7 @@ export interface ApiRobots {
   resistance: number;
   speed: number;
 }
+
+export interface Robot extends Omit<ApiRobots, "id"> {
+  _id: string;
+}
