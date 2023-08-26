@@ -4,13 +4,15 @@ import "./App.css";
 
 const App = (): React.ReactElement => {
   return (
-    <main className="main-content">
+    <div>
       <Header />
-      <Routes>
-        <Route path="/" element="/home" />
-        <p>BattleRobots</p>
-      </Routes>
-    </main>
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element="/home" />
+          <p>BattleRobots</p>
+        </Routes>
+      </main>
+    </div>
   );
 };
 
