@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import Header from "./Header";
 
 describe("Given a Header component", () => {
@@ -6,7 +7,11 @@ describe("Given a Header component", () => {
     test("Then it should show a 'Battle Robots app logo'", () => {
       const imageAltText = "Battle Robots app logo";
 
-      render(<Header />);
+      render(
+        <BrowserRouter>
+          <Header />
+        </BrowserRouter>,
+      );
 
       const imageElement = screen.getByAltText(imageAltText);
 
@@ -17,7 +22,11 @@ describe("Given a Header component", () => {
   test("Then it should show a 'Battle Robots' title inside a heading", () => {
     const titleExpected = "Battle Robots";
 
-    render(<Header />);
+    render(
+      <BrowserRouter>
+        <Header />
+      </BrowserRouter>,
+    );
 
     const headingTitle = screen.getByRole("heading", {
       name: titleExpected,
