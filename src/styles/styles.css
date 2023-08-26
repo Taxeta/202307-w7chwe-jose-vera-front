@@ -1,5 +1,6 @@
 :root {
   --primaryColor: rgb(74, 15, 15);
+  --secondaryColor: rgb(40, 28, 28);
   --primaryFont: "Ubuntu", sans-serif;
   --secondaryFont: "Coroman Garamond", sans-serif;
   --black: rgb(29, 27, 27);
@@ -16,7 +17,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--secondaryFont);
-  background-color: rgb(251, 251, 251);
+  background-color: var(--secondaryColor);
+  color: var(--white);
 }
 
 ul,
