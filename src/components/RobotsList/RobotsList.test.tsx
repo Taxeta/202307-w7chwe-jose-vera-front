@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
-import { store } from "../../store";
+import { robotsMock } from "../../mocks/mocksData";
+import { setupStore, store } from "../../store";
 import RobotsList from "./RobotsList";
 
 describe("Given a RobotsList component", () => {
@@ -19,6 +20,26 @@ describe("Given a RobotsList component", () => {
       });
 
       expect(textHeading).toBeInTheDocument();
+    });
+  });
+
+  describe("When it's rendered with 'world destroyer' and 'robot smasher' robots", () => {
+    test("Then it should show the robots names 'world destroyer' and 'robot smasher'", async () => {
+      const store = setupStore({ robotsState: { robots: robotsMock } });
+
+      render(
+        <Provider store={store}>
+          <RobotsList />
+        </Provider>,
+      );
+
+      robotsMock.forEach((robot) => {
+        const expectHeading = screen.getByRole("heading", {
+          name: robot.name,
+        });
+
+        expect(expectHeading).toBeInTheDocument();
+      });
     });
   });
 });
