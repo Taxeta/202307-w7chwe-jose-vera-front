@@ -11,7 +11,7 @@ const Navigation = (): React.ReactElement => {
           </NavLink>
         </li>
         <li>
-          <NavLink className="navigation-list" to="/createRobotPage">
+          <NavLink className="navigation-list" to="/robot-creator">
             Create Robot
           </NavLink>
         </li>
