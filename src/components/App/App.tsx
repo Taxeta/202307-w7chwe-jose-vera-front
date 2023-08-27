@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import NewRobotPage from "../../pages/NewRobotPage/NewRobotPage";
 import RobotsListPage from "../../pages/RobotsListPage/RobotsListPage";
 import { useAppSelector } from "../../store";
 import Header from "../Header/Header";
@@ -13,12 +14,12 @@ const App = (): React.ReactElement => {
       <Header />
       <main className="main-content">
         <Routes>
-          <Route path="home" element={<RobotsListPage />} />
           <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/robot-creator" element={<Navigate to="/home" />} />
+          <Route path="home" element={<RobotsListPage />} />
+          <Route path="/robot-creator" element={<NewRobotPage />} />
         </Routes>
-        {isLoading && <Loading />}
       </main>
+      {isLoading && <Loading />}
     </div>
   );
 };
