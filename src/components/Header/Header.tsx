@@ -5,7 +5,7 @@ import "./Header.css";
 const Header = (): React.ReactElement => {
   return (
     <header className="header">
-      <div>
+      <div className="header-container">
         <img
           className="header-logo"
           src={battleRobotsLogo}
