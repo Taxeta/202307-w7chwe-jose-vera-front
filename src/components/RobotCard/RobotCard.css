@@ -1,0 +1,33 @@
+.robot {
+  width: 320px;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+}
+
+.robot__container {
+  padding-bottom: 10px;
+}
+
+.robot__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--detailColor);
+  border-radius: 10px;
+  gap: 5px;
+}
+
+.robot__name {
+  font-family: var(--secondaryFont);
+  text-transform: capitalize;
+  color: var(--detailColor);
+}
+
+.robot__data-label {
+  padding: 5px;
+}
+
+.robot__data-container {
+  padding: 5px;
+}

@@ -1,6 +1,7 @@
 :root {
   --primaryColor: rgb(74, 15, 15);
   --secondaryColor: rgb(40, 28, 28);
+  --detailColor: rgb(80, 198, 231);
   --primaryFont: "Ubuntu", sans-serif;
   --secondaryFont: "Coroman Garamond", sans-serif;
   --black: rgb(29, 27, 27);
