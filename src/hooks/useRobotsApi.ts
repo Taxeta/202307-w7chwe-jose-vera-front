@@ -2,16 +2,16 @@ import axios from "axios";
 import { useCallback } from "react";
 import { ApiRobots, Robot } from "../types";
 
-const useRobotsApi = () => {
-  const apiUrl = import.meta.env.VITE_API_ROBOTS_URL;
+const apiUrl = import.meta.env.VITE_API_ROBOTS_URL;
 
+const useRobotsApi = () => {
   const getRobots = useCallback(async (): Promise<Robot[]> => {
     try {
-      const { data: apiRobots } = await axios.get<ApiRobots[]>(
+      const { data: apiRobots } = await axios.get<{ robots: ApiRobots[] }>(
         `${apiUrl}robots`,
       );
 
-      const robots = apiRobots.map<Robot>(
+      const robots = apiRobots.robots.map<Robot>(
         ({ _id, name, image, resistance, speed }) => ({
           id: _id,
           name,
@@ -22,10 +22,10 @@ const useRobotsApi = () => {
       );
 
       return robots;
-    } catch (error) {
+    } catch {
       throw new Error("Can't get any robot");
     }
-  }, [apiUrl]);
+  }, []);
 
   return { getRobots };
 };

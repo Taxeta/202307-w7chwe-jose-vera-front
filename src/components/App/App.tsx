@@ -9,11 +9,10 @@ const App = (): React.ReactElement => {
       <Header />
       <main className="main-content">
         <Routes>
-          <Route path="home" element />
+          <Route path="home" element={<RobotsListPage />} />
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/robot-creator" element={<Navigate to="/home" />} />
         </Routes>
-        <RobotsListPage />
       </main>
     </div>
   );
