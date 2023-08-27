@@ -3,7 +3,7 @@ import { Robot, RobotsApi } from "../types";
 export const robotsMock: Robot[] = [
   {
     id: "64e895e81736fb6abb590f0f",
-    name: "words destructor",
+    name: "world destroyer",
     image: "https://i.ytimg.com/vi/PFPIaU3ESOw/maxresdefault.jpg",
     speed: 9,
     resistance: 5,
@@ -22,7 +22,7 @@ export const apiRobotsMock: RobotsApi = {
   robots: [
     {
       _id: "64e895e81736fb6abb590f0f",
-      name: "words destructor",
+      name: "world destroyer",
       image: "https://i.ytimg.com/vi/PFPIaU3ESOw/maxresdefault.jpg",
       speed: 9,
       resistance: 5,
