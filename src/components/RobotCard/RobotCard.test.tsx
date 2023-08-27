@@ -6,8 +6,8 @@ import RobotCard from "./RobotCard";
 
 describe("Given a RobotCard component", () => {
   describe("When it's rendered", () => {
-    test("Then it should show an image with the alternative text 'words destructor destroying a robot'", () => {
-      const alternativeImageText = "words destructor destroying a robot";
+    test("Then it should show an image with the alternative text 'world destroyer destroying a robot'", () => {
+      const alternativeImageText = "world destroyer destroying a robot";
 
       render(
         <Provider store={store}>
@@ -20,8 +20,8 @@ describe("Given a RobotCard component", () => {
       expect(image).toBeInTheDocument();
     });
 
-    test("Then it should show a heading text 'words destructor'", () => {
-      const headingText = "words destructor";
+    test("Then it should show a heading text 'world destroyer'", () => {
+      const headingText = "world destroyer";
 
       render(
         <Provider store={store}>
