@@ -1,3 +1,5 @@
+import "./NewRobotForm.css";
+
 const NewRobotForm = () => {
   return (
     <form className="form">
@@ -14,7 +16,9 @@ const NewRobotForm = () => {
         <input type="text" id="image" maxLength={200} className="form__input" />
       </div>
       <div className="form-control">
-        <label htmlFor="resistance">Resistance (1-10):</label>
+        <label htmlFor="resistance" className="form__label">
+          Resistance (1-10):
+        </label>
         <input
           type="number"
           id="resistance"
@@ -24,7 +28,9 @@ const NewRobotForm = () => {
         />
       </div>
       <div className="form-control">
-        <label htmlFor="speed">Speed (1-10):</label>
+        <label htmlFor="speed" className="form__label">
+          Speed (1-10):
+        </label>
         <input
           type="number"
           id="speed"
@@ -33,7 +39,7 @@ const NewRobotForm = () => {
           className="form__input"
         />
       </div>
-      <div className="form__button-container">
+      <div className="button-container">
         <button type="submit" className="button form__button">
           Create Robot
         </button>
