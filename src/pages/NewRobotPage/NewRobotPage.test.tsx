@@ -5,8 +5,8 @@ import NewRobotPage from "./NewRobotPage";
 
 describe("Given a NewRobotPage page", () => {
   describe("When it's rendered", () => {
-    test("Then it should show 'Create your robot!' as heading", () => {
-      const expectedHeadingText = "Create your robot!";
+    test("Then it should show 'Log to create your WarRobot!' as heading", () => {
+      const expectedHeadingText = "Log to create your WarRobot!";
 
       render(
         <Provider store={store}>

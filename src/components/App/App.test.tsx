@@ -6,8 +6,8 @@ import App from "./App";
 
 describe("Given an App component", () => {
   describe("When rendered", () => {
-    test("Then it should show the text 'Battle Robots", () => {
-      const expectedText = "Battle Robots";
+    test("Then it should show the text 'List Of WarMachines", () => {
+      const expectedText = "List Of WarMachines";
 
       render(
         <Provider store={store}>
