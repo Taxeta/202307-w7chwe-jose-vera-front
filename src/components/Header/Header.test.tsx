@@ -17,21 +17,35 @@ describe("Given a Header component", () => {
 
       expect(imageElement).toBeInTheDocument();
     });
-  });
 
-  test("Then it should show a 'Battle Robots' title inside a heading", () => {
-    const titleExpected = "Battle Robots";
+    test("Then it should show a 'Battle Robots' title inside a heading", () => {
+      const titleExpected = "Battle Robots";
 
-    render(
-      <BrowserRouter>
-        <Header />
-      </BrowserRouter>,
-    );
+      render(
+        <BrowserRouter>
+          <Header />
+        </BrowserRouter>,
+      );
 
-    const headingTitle = screen.getByRole("heading", {
-      name: titleExpected,
+      const headingTitle = screen.getByRole("heading", {
+        name: titleExpected,
+      });
+
+      expect(headingTitle).toBeInTheDocument();
     });
 
-    expect(headingTitle).toBeInTheDocument();
+    test("Then it should show a 'Sign Out' text button inside a heading", () => {
+      const textOnButton = "Sign Out";
+
+      render(
+        <BrowserRouter>
+          <Header />
+        </BrowserRouter>,
+      );
+
+      const buttonText = screen.getByText(textOnButton);
+
+      expect(buttonText).toBeInTheDocument();
+    });
   });
 });

@@ -1,6 +1,23 @@
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Navigate } from "react-router-dom";
+import { auth } from "../../firebase/firebase";
 import "./NewRobotForm.css";
 
 const NewRobotForm = () => {
+  const [user, loading] = useAuthState(auth);
+
+  if (loading) {
+    return <span>Loading...</span>;
+  }
+
+  if (!user) {
+    return (
+      <>
+        <Navigate to="/robot-creator" />
+      </>
+    );
+  }
+
   return (
     <form className="form">
       <div className="form-control">

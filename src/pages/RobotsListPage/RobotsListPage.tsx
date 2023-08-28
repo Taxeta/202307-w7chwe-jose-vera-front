@@ -3,7 +3,6 @@ import RobotsList from "../../components/RobotsList/RobotsList";
 import useRobotsApi from "../../hooks/useRobotsApi";
 import { useAppDispatch } from "../../store";
 import { loadRobotsActionCreator } from "../../store/Robots/RobotsSlice";
-import "./RobotsListPage.css";
 
 const RobotsListPage = (): React.ReactElement => {
   const dispatch = useAppDispatch();

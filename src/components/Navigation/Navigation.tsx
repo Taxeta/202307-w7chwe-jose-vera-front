@@ -1,23 +1,7 @@
-import { useAuthState } from "react-firebase-hooks/auth";
-import { NavLink, Navigate } from "react-router-dom";
-import { auth } from "../../firebase/firebase";
+import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 
 const Navigation = (): React.ReactElement => {
-  const [user, loading] = useAuthState(auth);
-
-  if (loading) {
-    return <span>Loading...</span>;
-  }
-
-  if (!user) {
-    return (
-      <>
-        <Navigate to="/home" />
-      </>
-    );
-  }
-
   return (
     <nav className="main-container">
       <ul className="navigation-list">

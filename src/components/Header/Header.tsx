@@ -1,6 +1,7 @@
 import { signInWithPopup, signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import battleRobotsLogo from "../../assets/battleRobotsLogo.png";
+import iconExit from "../../assets/iconExit.png";
 import { auth, gitHubProvider } from "../../firebase/firebase";
 import Navigation from "../Navigation/Navigation";
 import "./Header.css";
@@ -35,8 +36,8 @@ const Header = (): React.ReactElement => {
           {user ? (
             <>
               <span className="login-user">{`Hi, ${user?.displayName}!`}</span>
-              <button className="logout" onClick={logout}>
-                Sign Out
+              <button onClick={logout}>
+                <img className="logout" src={iconExit} alt="Exit icon"></img>
               </button>
             </>
           ) : (

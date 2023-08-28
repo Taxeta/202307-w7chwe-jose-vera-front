@@ -44,23 +44,21 @@
 
 .logout {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  border: 1px solid var(--detailColor);
-  color: var(--white);
-  padding: 10px;
+  object-fit: cover;
   align-items: center;
-  width: 75%;
-  font-size: 12px;
-  border-radius: 10px;
+  width: 15px;
+  height: 15px;
 }
 
 .header-login {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
+  justify-content: flex-end;
   gap: 5px;
   padding: 10px;
-  align-items: center;
+  align-items: flex-end;
   text-align: center;
   width: 75%;
 }
@@ -79,26 +77,22 @@
   .header-login {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    justify-content: flex-end;
+    gap: 5px;
     padding: 10px;
-    align-items: center;
+    align-items: flex-end;
     text-align: center;
     width: 75%;
-    justify-content: flex-end;
   }
 
   .logout {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    border: 1px solid var(--detailColor);
-    color: var(--white);
-    padding: 10px;
+    object-fit: cover;
     align-items: center;
-    width: 120px;
-    height: 36px;
-    font-size: 12px;
-    border-radius: 10px;
+    width: 15px;
+    height: 15px;
   }
 
   .login {
