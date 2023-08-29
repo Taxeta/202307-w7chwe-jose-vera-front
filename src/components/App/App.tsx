@@ -4,6 +4,7 @@ import RobotsListPage from "../../pages/RobotsListPage/RobotsListPage";
 import { useAppSelector } from "../../store";
 import Header from "../Header/Header";
 import Loading from "../Loading/Loading";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 import "./App.css";
 
 const App = (): React.ReactElement => {
@@ -14,8 +15,15 @@ const App = (): React.ReactElement => {
       <Header />
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="home" element={<RobotsListPage />} />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Navigate to="/home" />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/home" element={<RobotsListPage />} />
           <Route path="/robot-creator" element={<NewRobotPage />} />
         </Routes>
       </main>
