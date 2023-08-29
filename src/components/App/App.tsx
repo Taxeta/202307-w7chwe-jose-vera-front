@@ -23,22 +23,8 @@ const App = (): React.ReactElement => {
               </ProtectedRoute>
             }
           />
-          <Route
-            path="/home"
-            element={
-              <ProtectedRoute>
-                <RobotsListPage />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/robot-creator"
-            element={
-              <ProtectedRoute>
-                <NewRobotPage />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/home" element={<RobotsListPage />} />
+          <Route path="/robot-creator" element={<NewRobotPage />} />
         </Routes>
       </main>
       {isLoading && <Loading />}

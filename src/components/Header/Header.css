@@ -32,7 +32,6 @@
 .login {
   display: flex;
   flex-direction: column;
-  align-items: center;
   border: 1px solid var(--detailColor);
   color: var(--white);
   padding: 10px;
@@ -47,7 +46,6 @@
   flex-direction: row;
   align-items: center;
   object-fit: cover;
-  align-items: center;
   width: 15px;
   height: 15px;
 }
@@ -90,7 +88,6 @@
     flex-direction: row;
     align-items: center;
     object-fit: cover;
-    align-items: center;
     width: 15px;
     height: 15px;
   }
@@ -98,7 +95,6 @@
   .login {
     display: flex;
     flex-direction: column;
-    align-items: center;
     border: 1px solid var(--detailColor);
     color: var(--white);
     padding: 10px;

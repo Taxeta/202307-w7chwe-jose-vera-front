@@ -2,7 +2,7 @@ import { signInWithPopup, signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import battleRobotsLogo from "../../assets/battleRobotsLogo.png";
 import iconExit from "../../assets/iconExit.png";
-import { auth, gitHubProvider } from "../../firebase/firebase";
+import auth, { gitHubProvider } from "../../firebase/firebase";
 import Navigation from "../Navigation/Navigation";
 import "./Header.css";
 
