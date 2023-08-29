@@ -1,7 +1,15 @@
 import { render, screen } from "@testing-library/react";
+import { User } from "firebase/auth";
+import auth, { AuthStateHook } from "react-firebase-hooks/auth";
 import { Provider } from "react-redux";
 import { store } from "../../store";
 import NewRobotForm from "./NewRobotForm";
+
+const user: Partial<User> = { displayName: "Jose" };
+
+const authStateHookMock: Partial<AuthStateHook> = [user as User];
+
+auth.useAuthState = vi.fn().mockReturnValue(authStateHookMock);
 
 describe("Given a NewRobotForm component", () => {
   describe("When it's rendered", () => {

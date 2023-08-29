@@ -42,7 +42,7 @@ const Header = (): React.ReactElement => {
             </>
           ) : (
             <button className="login" onClick={login}>
-              Sign In
+              Log In
             </button>
           )}
         </div>

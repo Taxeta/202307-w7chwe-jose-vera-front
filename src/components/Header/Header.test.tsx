@@ -1,6 +1,14 @@
 import { render, screen } from "@testing-library/react";
+import { User } from "firebase/auth";
+import auth, { AuthStateHook } from "react-firebase-hooks/auth";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./Header";
+
+const user: Partial<User> = { displayName: "Jose" };
+
+const authStateHookMock: Partial<AuthStateHook> = [user as User];
+
+auth.useAuthState = vi.fn().mockReturnValue(authStateHookMock);
 
 describe("Given a Header component", () => {
   describe("When it's rendered", () => {
@@ -34,8 +42,8 @@ describe("Given a Header component", () => {
       expect(headingTitle).toBeInTheDocument();
     });
 
-    test("Then it should show a 'Sign Out' text button inside a heading", () => {
-      const textOnButton = "Sign Out";
+    test("Then it should show a 'Log In' text button inside a heading", () => {
+      const initialText = "Hi, Jose!";
 
       render(
         <BrowserRouter>
@@ -43,7 +51,7 @@ describe("Given a Header component", () => {
         </BrowserRouter>,
       );
 
-      const buttonText = screen.getByText(textOnButton);
+      const buttonText = screen.getByText(initialText);
 
       expect(buttonText).toBeInTheDocument();
     });
